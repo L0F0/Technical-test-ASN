@@ -8,9 +8,11 @@ export class EquipmentController {
   constructor(private readonly equipmentService: EquipmentService) {}
 
   @Post('kraken')
-  async createOrUpdate(
-    @Body() updateCatDto: EquipmentCategoryDto,
-  ): Promise<EquipmentCategory> {
-    return await this.equipmentService.updateEquipment(updateCatDto);
+  async createOrUpdate(@Body() equipmentCategoryDto: EquipmentCategoryDto[]) {
+    for (let i = 0; i < equipmentCategoryDto.length; i++) {
+      const currentEquipment = equipmentCategoryDto[i];
+      await this.equipmentService.updateEquipment(currentEquipment);
+    }
+    return;
   }
 }

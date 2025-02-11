@@ -38,7 +38,6 @@ export class ImportDataService {
       const date = new DateFormat(currentEquipment[1]).formatToDate();
       const prices = new Price(currentEquipment[2].toString()).convertPrice();
       const isIndexEquipment = this.validationOccurenceByName(currentEquipment);
-      console.log('before: ', isIndexEquipment);
       if (isIndexEquipment < 0) {
         this.equipment.push(
           new Equipment(
@@ -50,7 +49,6 @@ export class ImportDataService {
           )
         );
       } else {
-        console.log('in: ', isIndexEquipment);
         this.equipment[isIndexEquipment] = {
           name: name,
           updated_at: date,
