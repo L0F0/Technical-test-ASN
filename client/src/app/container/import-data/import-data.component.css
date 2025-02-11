@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.import-data-container {
+  margin: 0 50%;
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding: 10px;
+}
