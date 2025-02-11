@@ -1,11 +1,9 @@
 <div class="container">
     <div class="import-data-container">
-        <div>
-            <label>Import data</label>
-            <input id="dataSelect" type="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" (change)="onFileChange($event)"/>
-            <button (click)="onUpdateEquipment()">
-                Upload
-            </button>
-        </div>
+        <label >Import data</label>
+        <input id="dataSelect" type="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" (change)="onFileChange($event)"/>
+        <button (click)="onUpdateEquipment()">
+            Upload
+        </button>
     </div>
 </div>
